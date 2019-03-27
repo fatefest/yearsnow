@@ -1,0 +1,19 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    tomcat:
+      uri-encoding: UTF-8
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.client.eureka-server-port}/eureka/
+    eureka-server-port: 8761
+  instance:
+    preferIpAddress: true
+    hostname: localhost
+spring:
+  application:
+    name: user-consumer
