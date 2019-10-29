@@ -13,6 +13,7 @@ public class UserController {
 
     @GetMapping(value = "/user/{userId}")
     public String index(@PathVariable(name = "userId") int userId) {
+        System.out.printf("userId : {}",userId);
         return "hello "+userId+"，this is first message";
     }
 }
